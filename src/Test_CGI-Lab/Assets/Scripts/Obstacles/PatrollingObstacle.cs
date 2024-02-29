@@ -55,10 +55,7 @@ namespace Obstacles
 			PatrollingObstacle po = obj.GetComponent<PatrollingObstacle>();
 			po.m_Segement = segment;
 
-			//TODO : remove that hack related to #issue7
-			Vector3 oldPos = obj.transform.position;
-			obj.transform.position += Vector3.back;
-			obj.transform.position = oldPos;
+			Repositionate(obj);
 
 			po.Setup();
 		}

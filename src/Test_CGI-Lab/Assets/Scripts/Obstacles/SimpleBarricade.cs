@@ -50,10 +50,7 @@ namespace Obstacles
 
                     obj.transform.SetParent(segment.objectRoot, true);
 
-                    //TODO : remove that hack related to #issue7
-                    Vector3 oldPos = obj.transform.position;
-                    obj.transform.position += Vector3.back;
-                    obj.transform.position = oldPos;
+                    Repositionate(obj);
                 }
             }
         }

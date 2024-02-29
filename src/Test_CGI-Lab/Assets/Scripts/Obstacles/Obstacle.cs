@@ -35,5 +35,12 @@ namespace Obstacles
 				audioSource.Play();
 			}
 		}
+
+		public void Repositionate(GameObject obj)
+		{
+			Vector3 oldPos = obj.transform.position;
+            obj.transform.position += Vector3.back;
+            obj.transform.position = oldPos;
+		}
 	}
 }
